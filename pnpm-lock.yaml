@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@rainbow-me/rainbowkit': ^2.1.0
+  '@rainbow-me/rainbowkit': ^2.1.1
   '@tanstack/react-query': ^5.37.1
   '@types/node': ^20
   '@types/react': ^18
@@ -15,16 +15,16 @@ specifiers:
   tailwindcss: ^3.4.1
   typescript: ^5
   viem: 2.x
-  wagmi: ^2.9.4
+  wagmi: ^2.9.5
 
 dependencies:
-  '@rainbow-me/rainbowkit': 2.1.0_seh6dpkwd2iw6bmijqvvqxlkoq
+  '@rainbow-me/rainbowkit': 2.1.1_xnhdnod5mp5pozf5gjx5pznm7q
   '@tanstack/react-query': 5.37.1_react@18.3.1
   next: 14.2.3_nnrd3gsncyragczmpvfhocinkq
   react: 18.3.1
   react-dom: 18.3.1_react@18.3.1
   viem: 2.12.0_typescript@5.4.5
-  wagmi: 2.9.4_m5b37bsqccv65y5xkkk63rj2qe
+  wagmi: 2.9.5_m5b37bsqccv65y5xkkk63rj2qe
 
 devDependencies:
   '@types/node': 20.12.12
@@ -69,8 +69,8 @@ packages:
       - supports-color
     dev: false
 
-  /@coinbase/wallet-sdk/4.0.0:
-    resolution: {integrity: sha512-7q8k39a2Iuz30dAEeh86AaSAbLgVPW3gfLa1UYh2IqP7gS+X9witoMEMM8o016K6vxP5N++PrM+Lgu/O1KByBA==}
+  /@coinbase/wallet-sdk/4.0.2:
+    resolution: {integrity: sha512-WMUeFbtS0rn8zavjAmNhFWq1r3TV7E5KuSij1Sar0/XuOC+nhj96uqSlIApAHdhuScoKZBq39VYsAQCHzOC6/w==}
     dependencies:
       buffer: 6.0.3
       clsx: 1.2.1
@@ -781,8 +781,8 @@ packages:
     dev: true
     optional: true
 
-  /@rainbow-me/rainbowkit/2.1.0_seh6dpkwd2iw6bmijqvvqxlkoq:
-    resolution: {integrity: sha512-KUkEHcVfqVuDHS2cxvaoy8R4N1EC/t/x0uYkgUkbDS8ShoW6ZJeP4qocxyvKsdYynm5srI/FPmbTSdgojV279Q==}
+  /@rainbow-me/rainbowkit/2.1.1_xnhdnod5mp5pozf5gjx5pznm7q:
+    resolution: {integrity: sha512-iOn4m1CTv+ezzYpiA4QU+v6JFB94NY6h5ohpQi3Qt/qZXdHzp3NAKUrESQ10kFx2Xc4px80PKdggeES0UPZw0A==}
     engines: {node: '>=12.4'}
     peerDependencies:
       '@tanstack/react-query': '>=5.0.0'
@@ -802,7 +802,7 @@ packages:
       react-remove-scroll: 2.5.7_2eeaxkqdcvbrwk75oeh4jz4him
       ua-parser-js: 1.0.37
       viem: 2.12.0_typescript@5.4.5
-      wagmi: 2.9.4_m5b37bsqccv65y5xkkk63rj2qe
+      wagmi: 2.9.5_m5b37bsqccv65y5xkkk63rj2qe
     transitivePeerDependencies:
       - '@types/react'
     dev: false
@@ -1168,8 +1168,8 @@ packages:
       '@vanilla-extract/css': 1.14.0
     dev: false
 
-  /@wagmi/connectors/5.0.3_e2372y45wwuzatzbrgy3xv5nki:
-    resolution: {integrity: sha512-TmX/mBO9lJQlwl+l5WU7RS/eaG5CKsevEZHCmdDcz1/bTmj0fr3KjUZLzpNuEjZnuABPmxG54Q1l/HM2gVkq4g==}
+  /@wagmi/connectors/5.0.4_e2372y45wwuzatzbrgy3xv5nki:
+    resolution: {integrity: sha512-aJgn1J8Z6qWQW1GgrL87qBqqYJhyakuIaK8eDFM8M+Wa8mgCSw8HYPHVpAwoWoHK2RNevbGQbbeEyvCOhJtfvw==}
     peerDependencies:
       '@wagmi/core': 2.10.3
       typescript: '>=5.0.4'
@@ -1178,7 +1178,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@coinbase/wallet-sdk': 4.0.0
+      '@coinbase/wallet-sdk': 4.0.2
       '@metamask/sdk': 0.20.3_nnrd3gsncyragczmpvfhocinkq
       '@safe-global/safe-apps-provider': 0.18.1_typescript@5.4.5
       '@safe-global/safe-apps-sdk': 8.1.0_typescript@5.4.5
@@ -3205,6 +3205,7 @@ packages:
 
   /inflight/1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
@@ -5387,8 +5388,8 @@ packages:
       - zod
     dev: false
 
-  /wagmi/2.9.4_m5b37bsqccv65y5xkkk63rj2qe:
-    resolution: {integrity: sha512-Lu/L0KiZ9SGQ88DYZUQViOXGxqsiBJ6ocB/Ym0NqXNX2V4t0q3+95YzF4/hpip3AL8YLiEjpJe/CyxPlxYgwjQ==}
+  /wagmi/2.9.5_m5b37bsqccv65y5xkkk63rj2qe:
+    resolution: {integrity: sha512-JDJ5LoI6ZIiNpd5ZuvDFHMMoAaoKwaeMO7LPSZwUKEqQ5cfcID6pP2CLeTnaHUgfbmjozZUbjS6i1csxTRB+qQ==}
     peerDependencies:
       '@tanstack/react-query': '>=5.0.0'
       react: '>=18'
@@ -5399,7 +5400,7 @@ packages:
         optional: true
     dependencies:
       '@tanstack/react-query': 5.37.1_react@18.3.1
-      '@wagmi/connectors': 5.0.3_e2372y45wwuzatzbrgy3xv5nki
+      '@wagmi/connectors': 5.0.4_e2372y45wwuzatzbrgy3xv5nki
       '@wagmi/core': 2.10.3_loak4usqdfswpjcbdbvco6qrrq
       react: 18.3.1
       typescript: 5.4.5
