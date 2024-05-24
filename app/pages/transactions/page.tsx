@@ -18,7 +18,7 @@ const Page = () => {
   }, []);
 
   if (!mounted) {
-    return <h1>Loading</h1>; // or a loading spinner
+    return <h1 className="container">Loading</h1>; // or a loading spinner
   }
   return (
     <div className="container">
