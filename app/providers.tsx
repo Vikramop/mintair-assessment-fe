@@ -53,6 +53,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <RainbowKitProvider
+          showRecentTransactions={true}
           theme={darkTheme({
             accentColor: '#147487',
           })}
