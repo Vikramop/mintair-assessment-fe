@@ -36,12 +36,15 @@ const DotVariants = {
   animate: {
     y: '100%',
   },
+  end: {
+    y: '0%',
+  },
 };
 
 const DotTransition = {
-  duration: 0.5,
-  yoyo: Infinity,
-  ease: 'easeInOut',
+  duration: 2,
+  repeat: Infinity,
+  ease: 'backInOut',
 };
 
 export default function Loading() {
