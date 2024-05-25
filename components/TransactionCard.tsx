@@ -66,8 +66,9 @@ const TransactionCard: React.FC<TransactionCardProps> = ({ transaction }) => {
             <p className="font-bold text-xl">
               Status:{' '}
               <span className="font-semibold text-lg">
-                {transaction.txreceipt_status === 1 ? 'Success' : 'Failed'}
+                {transaction.txreceipt_status == 1 ? 'Success' : 'Failed'}
               </span>
+                
             </p>
           </>
         )}
