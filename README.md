@@ -48,4 +48,4 @@ pnpm dev
   <img src="./public/image.png" alt="Logo" width="100%" height="100%">
 </div>
 
-- Note You can further run the application if you have metamask install in you system, Learn more about [Metamask here](https://investorsupport.securitize.io/hc/en-us/articles/5679405490711-How-to-Install-Metamask-on-Your-Desktop-Browser#:~:text=Installing%20MetaMask&text=Getting%20started%20with%20MetaMask%20is,you%20download%20the%20correct%20software.&text=Now%2C%20if%20you%20use%20Chrome%2C%20click%20Install%20Metamask%20for%20Chrome.).
+- Note You can further run the application if you have metamask installed in you system, Learn more about [Metamask here](https://investorsupport.securitize.io/hc/en-us/articles/5679405490711-How-to-Install-Metamask-on-Your-Desktop-Browser#:~:text=Installing%20MetaMask&text=Getting%20started%20with%20MetaMask%20is,you%20download%20the%20correct%20software.&text=Now%2C%20if%20you%20use%20Chrome%2C%20click%20Install%20Metamask%20for%20Chrome.).
