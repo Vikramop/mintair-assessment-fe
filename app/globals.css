@@ -2,7 +2,125 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+@layer utilities {
+  .backdrop-blur {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+/* :root {
+  background-color: black;
+} */
+
+body {
+  background: radial-gradient(
+    circle at center,
+    #330139 0%,
+    #23013d 50%,
+    #120120 100%
+  );
+  background-color: #120120; /* Fallback color */
+  height: 100vh;
+  margin: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* body {
+  background: radial-gradient(
+    circle,
+    #330139 0%,
+    #330139 45%,
+    #23013d 45%,
+    #23013d 55%,
+    #120120 100%
+  );
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: #70bg32;
+  background-repeat:no-repeat;
+  background: -webkit-linear-gradient( to left top, blue, red);
+  background: -moz-linear-gradient( to left top, blue, red);
+  background: -ms-linear-gradient( to left top, blue, red);
+  background: -o-linear-gradient( to left top, blue, red);
+  background: linear-gradient( to left top, blue, red);
+} */
+
+/* .card {
+  margin: 100px auto;
+  width: 350px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: attr(content);
+  position: absolute;
+  width: 345px;
+  height: 45px;
+  z-index: 1;
+  background-color: #eee;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+} */
+
+/* .card::hover {
+  content: '';
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  border-radius: 50px;
+
+  border: solid
+    conic-gradient(
+      #3a7cec 0%12.5%,
+      #2ca24c 12.5%25%,
+      #f1b500 25%37.5%,
+      #e33e2b 37.5%50%,
+      #3a7cec 50%62.5%,
+      #2ca24c 62.5%75%,
+      #f1b500 75%87.5%,
+      #e33e2b 87.5%100%
+    );
+  animation: border-animation 5s linear infinite;
+  -webkit-animation: border-animation 5s linear infinite;
+}
+
+@keyframes border-animation {
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+} */
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -30,4 +148,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

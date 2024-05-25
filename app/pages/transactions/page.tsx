@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { useAccount } from 'wagmi';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-// import UserTransactions from '@/components/UserTrasactions';
 import dynamic from 'next/dynamic';
 
 const UserTransactions = dynamic(() => import('@/components/UserTrasactions'), {
@@ -18,11 +17,11 @@ const Page = () => {
   }, []);
 
   if (!mounted) {
-    return <h1 className="container">Loading</h1>; // or a loading spinner
+    return <h1 className="container">Hold On!!</h1>;
   }
   return (
     <div className="container">
-      <p className="text-center font-semibold text-3xl hover:text-purple-500 my-4">
+      <p className="text-center font-semibold text-3xl hover:text-purple-500 my-4 text-white">
         Recent Transactions
       </p>
 

@@ -55,7 +55,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
         <RainbowKitProvider
           showRecentTransactions={true}
           theme={darkTheme({
-            accentColor: '#147487',
+            accentColor: '#0FAE96',
           })}
         >
           {children}
