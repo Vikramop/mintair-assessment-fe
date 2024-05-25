@@ -25,7 +25,11 @@ const Page = () => {
         Recent Transactions
       </p>
 
-      {isConnected ? <UserTransactions account={address} /> : <ConnectButton />}
+      {isConnected ? (
+        <UserTransactions account={address || ''} />
+      ) : (
+        <ConnectButton />
+      )}
     </div>
   );
 };
