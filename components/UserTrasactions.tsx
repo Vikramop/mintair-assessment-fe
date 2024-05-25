@@ -25,7 +25,7 @@ const fetchTransactions = async ({ pageParam = 1, queryKey }: any) => {
 };
 
 const UserTransactions: React.FC<UserTransactionsProps> = ({ account }) => {
-  const [activeTab, setActiveTab] = useState('specifiedAddress'); // state to manage active tab
+  const [activeTab, setActiveTab] = useState('specifiedAddress');
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
 
   const {
@@ -126,93 +126,33 @@ const UserTransactions: React.FC<UserTransactionsProps> = ({ account }) => {
   }
 
   if (accountError) {
-    return <p>No transactions found for logged-in account</p>; // Display message if no transactions found
+    return <p>No transactions found for logged-in account</p>;
   }
 
   if (specifiedError) {
-    return <p>No transactions found for specified address</p>; // Display message if no transactions found
+    return <p>No transactions found for specified address</p>;
   }
 
   return (
     <div>
-      <div className="tabs bg-red-20 flex gap-10 justify-center ">
+      <div className="tabs bg-red-20 flex gap-10 justify-center my-6">
         <button
-          className={`tab text-2xl font-bold  text-white pb-3 ${
-            activeTab === 'specifiedAddress' ? 'active text-purple-400' : ''
+          className={`tab text-2xl font-semibold  text-white pb-3 ${
+            activeTab === 'specifiedAddress' ? 'active text-orange-400' : ''
           }`}
           onClick={() => setActiveTab('specifiedAddress')}
         >
           Specified Address
         </button>
         <button
-          className={`tab text-2xl font-bold  text-white pb-3 ${
-            activeTab === 'loggedInAccount' ? 'active text-purple-400' : ''
+          className={`tab text-2xl font-semibold  text-white pb-3 ${
+            activeTab === 'loggedInAccount' ? 'active text-orange-400' : ''
           }`}
           onClick={() => setActiveTab('loggedInAccount')}
         >
           My Account
         </button>
       </div>
-
-      {activeTab === 'loggedInAccount' && (
-        <>
-          {accountTransactions && accountTransactions.pages.length > 0 && (
-            <ul>
-              {accountTransactions.pages.map((page) =>
-                page.transactions.map((tx: any) => (
-                  <div
-                    key={tx.hash}
-                    className="card hover:border-purple-700 hover:border-4 bg-blue-300 border-4 border-blue-300 rounded-lg my-4 p-4"
-                    onClick={() => toggleCard(tx.hash)}
-                  >
-                    <li>
-                      <p className="font-bold text-xl">
-                        Sender address :{' '}
-                        <span className="font-semibold text-lg">
-                          {tx.from}{' '}
-                        </span>
-                      </p>{' '}
-                      <br />
-                      <p className="font-bold text-xl">
-                        Receiver address :{' '}
-                        <span className="font-semibold text-lg">{tx.to} </span>
-                      </p>{' '}
-                      <br />
-                      <p className="font-bold text-xl">
-                        Value :{' '}
-                        <span className="font-semibold text-lg">
-                          {formatEtherValue(tx.value)} ETH
-                        </span>
-                      </p>{' '}
-                      <br />
-                      {expandedCard === tx.hash && (
-                        <div>
-                          <p className="font-bold text-xl">
-                            Name:{' '}
-                            <span className="font-semibold text-lg">
-                              John Doe
-                            </span>
-                          </p>
-                          <br />
-                          <p className="font-bold text-xl">
-                            Email:{' '}
-                            <span className="font-semibold text-lg">
-                              john.doe@example.com
-                            </span>
-                          </p>
-                        </div>
-                      )}
-                    </li>
-                  </div>
-                ))
-              )}
-            </ul>
-          )}
-          <div ref={accountRef}>
-            {isFetchingNextAccountPage && <p>Loading more...</p>}
-          </div>
-        </>
-      )}
 
       {activeTab === 'specifiedAddress' && (
         <>
@@ -222,7 +162,7 @@ const UserTransactions: React.FC<UserTransactionsProps> = ({ account }) => {
                 page.transactions.map((tx: any) => (
                   <div
                     key={tx.hash}
-                    className="glass-card bg-white bg-opacity-10 backdrop-blur border border-white border-opacity-20 rounded-xl shadow-lg p-6  text-white my-4"
+                    className="glass-card cursor-pointer bg-white bg-opacity-10 backdrop-blur border border-white border-opacity-20 rounded-xl shadow-lg p-6  text-white my-4"
                     onClick={() => toggleCard(tx.hash)}
                   >
                     <li>
@@ -283,6 +223,66 @@ const UserTransactions: React.FC<UserTransactionsProps> = ({ account }) => {
                 </p>
               </div>
             )}
+          </div>
+        </>
+      )}
+
+      {activeTab === 'loggedInAccount' && (
+        <>
+          {accountTransactions && accountTransactions.pages.length > 0 && (
+            <ul>
+              {accountTransactions.pages.map((page) =>
+                page.transactions.map((tx: any) => (
+                  <div
+                    key={tx.hash}
+                    className="card hover:border-purple-700 hover:border-4 bg-blue-300 border-4 border-blue-300 rounded-lg my-4 p-4"
+                    onClick={() => toggleCard(tx.hash)}
+                  >
+                    <li>
+                      <p className="font-bold text-xl">
+                        Sender address :{' '}
+                        <span className="font-semibold text-lg">
+                          {tx.from}{' '}
+                        </span>
+                      </p>{' '}
+                      <br />
+                      <p className="font-bold text-xl">
+                        Receiver address :{' '}
+                        <span className="font-semibold text-lg">{tx.to} </span>
+                      </p>{' '}
+                      <br />
+                      <p className="font-bold text-xl">
+                        Value :{' '}
+                        <span className="font-semibold text-lg">
+                          {formatEtherValue(tx.value)} ETH
+                        </span>
+                      </p>{' '}
+                      <br />
+                      {expandedCard === tx.hash && (
+                        <div>
+                          <p className="font-bold text-xl">
+                            Name:{' '}
+                            <span className="font-semibold text-lg">
+                              John Doe
+                            </span>
+                          </p>
+                          <br />
+                          <p className="font-bold text-xl">
+                            Email:{' '}
+                            <span className="font-semibold text-lg">
+                              john.doe@example.com
+                            </span>
+                          </p>
+                        </div>
+                      )}
+                    </li>
+                  </div>
+                ))
+              )}
+            </ul>
+          )}
+          <div ref={accountRef}>
+            {isFetchingNextAccountPage && <p>Loading more...</p>}
           </div>
         </>
       )}

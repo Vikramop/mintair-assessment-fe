@@ -21,14 +21,19 @@ const Page = () => {
   }
   return (
     <div className="container">
-      <p className="text-center font-semibold text-3xl hover:text-purple-500 my-4 text-white">
+      <p className="text-center font-semibold text-3xl hover:text-purple-500 my-4 text-white mt-6">
         Recent Transactions
       </p>
 
       {isConnected ? (
         <UserTransactions account={address || ''} />
       ) : (
-        <ConnectButton />
+        <div className="h-[65vh] flex flex-col justify-center items-center">
+          <p className="text-lg text-white my-6">
+            Please connect Wallet to see Your transactions
+          </p>
+          <ConnectButton label="Connect Your  Wallet" />
+        </div>
       )}
     </div>
   );

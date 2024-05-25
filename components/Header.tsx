@@ -15,14 +15,16 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex gap-4">
+          <Link href="/">
+            <p className="text-white">Home</p>
+          </Link>
           <Link href="./pages/transactions" className="text-white">
             Transactions
           </Link>
-          <p className="text-white">About Us</p>
-          <p className="text-white">Contact Us</p>
+          <p className="text-white">About </p>
         </div>
         <div>
-          <ConnectButton />
+          <ConnectButton showBalance={false} chainStatus="icon" />
         </div>
       </div>
     </div>

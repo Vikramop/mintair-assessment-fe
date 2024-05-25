@@ -3,11 +3,11 @@ import React from 'react';
 
 const Features = () => {
   return (
-    <div className="container">
-      <h1 className="text-5xl font-semibold  capitalize text-center mb-6 text-white">
+    <div className="container my-16 mb-24">
+      <h1 className="text-5xl font-semibold  capitalize text-center mb-20 text-white">
         Our Features
       </h1>
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-2 gap-10">
         <Card
           Title="Secure Transactions"
           Desc="All transactions are securely encrypted and recorded on the
