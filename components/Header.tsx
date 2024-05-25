@@ -31,7 +31,7 @@ const Header = () => {
         <div
           className={`flex-col md:flex-row md:flex gap-4 items-center ${
             isMenuOpen
-              ? 'flex absolute top-12 mt-2 right-2 rounded-md bg-slate-800 p-4'
+              ? 'flex absolute max-md:z-50 top-12 mt-2 right-2 max-md:rounded-md max-md:bg-slate-800 p-4'
               : 'hidden'
           } md:flex`}
         >

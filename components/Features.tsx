@@ -4,7 +4,7 @@ import React from 'react';
 const Features = () => {
   return (
     <div className="container my-16 mb-24">
-      <h1 className="text-5xl font-semibold  capitalize text-center mb-20 text-white">
+      <h1 className="md:text-5xl font-semibold  capitalize text-center mb-20 text-white sm:text-3xl text-2xl">
         Our Features
       </h1>
       <div className="grid md:grid-cols-2 gap-10">
