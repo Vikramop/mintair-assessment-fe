@@ -41,6 +41,7 @@ const UserTransactions: React.FC<UserTransactionsProps> = ({ account }) => {
     getNextPageParam: (lastPage) =>
       lastPage.transactions.length ? lastPage.nextPage : undefined,
     enabled: !!account,
+    initialPageParam: 1,
   });
 
   const {
@@ -55,6 +56,7 @@ const UserTransactions: React.FC<UserTransactionsProps> = ({ account }) => {
     queryFn: fetchTransactions,
     getNextPageParam: (lastPage) =>
       lastPage.transactions.length ? lastPage.nextPage : undefined,
+    initialPageParam: 1,
   });
 
   const accountRef = useRef<HTMLDivElement>(null);
