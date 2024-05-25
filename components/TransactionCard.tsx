@@ -28,12 +28,16 @@ const TransactionCard: React.FC<TransactionCardProps> = ({ transaction }) => {
       <li>
         <p className="font-bold text-xl">
           Sender address :{' '}
-          <span className="font-semibold text-lg">{transaction.from} </span>
+          <span className="font-semibold text-lg break-words">
+            {transaction.from}{' '}
+          </span>
         </p>{' '}
         <br />
         <p className="font-bold text-xl">
           Receiver address :{' '}
-          <span className="font-semibold text-lg">{transaction.to} </span>
+          <span className="font-semibold text-lg break-words">
+            {transaction.to}{' '}
+          </span>
         </p>{' '}
         <br />
         <p className="font-bold text-xl">
@@ -47,7 +51,9 @@ const TransactionCard: React.FC<TransactionCardProps> = ({ transaction }) => {
           <>
             <p className="font-bold text-xl">
               Transaction hash:{' '}
-              <span className="font-semibold text-lg">{transaction.hash}</span>
+              <span className="font-semibold text-lg break-words">
+                {transaction.hash}
+              </span>
             </p>
             <br />
             <p className="font-bold text-xl">

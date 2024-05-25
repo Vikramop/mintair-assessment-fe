@@ -7,7 +7,7 @@ const Features = () => {
       <h1 className="text-5xl font-semibold  capitalize text-center mb-20 text-white">
         Our Features
       </h1>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-10">
         <Card
           Title="Secure Transactions"
           Desc="All transactions are securely encrypted and recorded on the

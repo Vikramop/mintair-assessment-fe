@@ -17,7 +17,11 @@ const Page = () => {
   }, []);
 
   if (!mounted) {
-    return <h1 className="container">Hold On!!</h1>;
+    return (
+      <h1 className="container text-center text-white my-4 text-lg">
+        Hold On!!
+      </h1>
+    );
   }
   return (
     <div className="container">
