@@ -17,7 +17,7 @@ const TransactionList: React.FC<TransactionListProps> = ({
   isLoading,
   isFetchingNextPage,
 }) => {
-  const listRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLUListElement>(null); 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +53,7 @@ const TransactionList: React.FC<TransactionListProps> = ({
       {isFetchingNextPage && (
         <div className="flex justify-center items-center">
           <p className="bg-gray-500 rounded-full px-6 py-2 text-xl font-bold text-white">
-            Loading more...{' '}
+            Loading more...
           </p>
         </div>
       )}
